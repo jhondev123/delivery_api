@@ -31,7 +31,7 @@ Route::prefix('admin')->middleware('auth:sanctum', CheckAdminMiddleware::class)-
     Route::prefix('dashboard')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::get('/orders', [DashboardController::class, 'orders'])->name('dashboard.orders');
-        Route::get('/orders/{id}', [DashboardController::class, 'show'])->name('dashboard.orders');
+        Route::get('/orders/{id}', [DashboardController::class, 'show'])->name('dashboard.order');
     });
 
     Route::prefix('users')->group(function () {
